@@ -4,44 +4,50 @@ public class BoxingAndUnboxing {
 
     public static void main(String[] args) {
 
-        // Primitive To Class
-        Integer i = Integer.valueOf(10);    // Boxing       - Develop
-        Integer ii = 10;                    // AutoBoxing   - Compiler
+        Integer int_TO_Integer              =   12;                              // AutoBoxing
+     // Integer double_TO_Integer           =   12D;                             // COMPILE ERROR
 
-        // Class To Primitive
-        int j = i.intValue();               // Unboxing     - Develop
-        int jj = ii;                        // AutoUnboxing - Compiler
+        Integer Integer_TO_Integer          =   Integer.valueOf(12);             // Boxing
 
-        // -----------------------------------------------------
+        Integer Double_TO_int_TO_Integer    = Double.valueOf(13).intValue();     // Boxing, Unboxing AND AutoBoxing
+     // Integer Double_TO_Integer           = Double.valueOf(13);                // COMPILE ERROR
 
-        // Primitive To Class
-        Double d = Double.valueOf(12);      // Boxing       - Develop
-        Double dd = 10D;                    // AutoBoxing   - Compiler
+        Integer double_to_int_TO_Integer    = (int)                         12D; // Explicit Cast AND AutoBoxing
+        Integer Double_TO_double_TO_Integer = (int) (double) Double.valueOf(10); // Boxing, AutoUnboxing, Explicit Cast AND AutoBoxing
 
-        // Class To Primitive
-        double s = d.doubleValue();         // Unboxing     - Develop
-        double ss = dd;                     // AutoUnboxing - Compiler
+     // ----------------------------------------------------------------------------------------------
 
-        double s1   = (double) Double.valueOf(10).intValue();   // Explicit cast int to double
-        double s2   = Double.valueOf(10).intValue();            // Implicit cast int to double
+     // Double int_TO_Double                    =                0 ;                  // COMPILE ERROR
+        Double double_TO_Double                 =                9D;                  // AutoBoxing
 
-        // -----------------------------------------------------
+        Double int_TO_double_TO_Double          = (double)                        9;  // Explicit Cast AutoBoxing
+        Double Integer_TO_int_TO_double_Double1 = (double)       Integer.valueOf(7);  // Boxing, AutoUnboxing, Implicit Cast AND AutoBoxing
+        Double Integer_TO_int_TO_double_Double2 = (double) (int) Integer.valueOf(0);  // Boxing, AutoUnboxing, Explicit Cast AND AutoBoxing
 
-        double dd0 = Integer.valueOf(0);                    // Integer to double with implicit cast
-        double dd1 = (double) Integer.valueOf(0);           // Integer to double with explicit cast
+        Double Double_TO_Double            = Double.valueOf(9);                       // Boxing
+        Double Integer_TO_double_TO_Double = Integer.valueOf(13).doubleValue();       // Boxing, Unboxing AND AutoBoxing
+    //  Double Integer_TO_Double           = Integer.valueOf(0);                      // COMPILE ERROR
 
-        // Double dd2 = 0;                                  // int to Double no implicit cast - COMPILE ERROR
-        Double dd2 = (double) 0;                            // int to Double with explicit cast
+     // ----------------------------------------------------------------------------------------------
 
-        // int ii0 =  Double.valueOf(0);                    // Double to int with implicit cast - COMPILE ERROR
-        // int ii0 = (int) Double.valueOf(0);               // Double to int with explicit cast - COMPILE ERROR
+        int Integer_TO_int0          =                Integer.valueOf(11);              // Boxing, AutoUnboxing
+        int Integer_TO_int1          =                Integer.valueOf(11).intValue();   // Boxing, Unboxing
+     // int double_TO_int            =                Double.valueOf(0).doubleValue();  // COMPILE ERROR
 
-        int ii0 = (int) (double) Double.valueOf(0);         // Double to double AND double to int with TWO explicit cast
-        int ii1 = (int) Double.valueOf(0).doubleValue();    // Double to double no cast AND double to int with explicit cast
+        int Double_TO_double_TO_int1 = (int) (double) Double.valueOf(10);               // Boxing, AutoUnboxing AND Explicit Cast   **Nota: Force AutoUnboxing
+        int Double_TO_double_TO_int2 = (int)          Double.valueOf(11).doubleValue(); // Boxing, Unboxing AND Explicit Cast
+     // int Double_TO_int            = (int)          Double.valueOf(10);               // COMPILE ERROR
 
-        // Integer ii0 = 0D;                                // double to Integer with implicit cast - COMPILE ERROR
-        Integer ii2 = (int) 0D;                             // double to Integer with explicit cast
 
-        Integer ii3 = Double.valueOf(0).intValue();         // Double to Integer no cast
+     // ----------------------------------------------------------------------------------------------
+
+        double Double_TO_double0      =         Double.valueOf(11);                  // Boxing, AutoUnboxing
+        double Double_TO_double1      =         Double.valueOf(11).doubleValue();    // Boxing, Unboxing
+
+        double int_TO_double      =                             15;
+        double Integer_TO_double0 =             Integer.valueOf(15);   // Boxing, AutoUnboxing AND Implicit Cast
+        double Integer_TO_double1 =  (double)   Integer.valueOf(15);   // Boxing, AutoUnboxing AND Explicit Cast
+
+
     }
 }
