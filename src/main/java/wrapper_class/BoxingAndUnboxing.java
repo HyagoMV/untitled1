@@ -21,12 +21,11 @@ public class BoxingAndUnboxing {
         Double double_TO_Double                 =                9D;                  // AutoBoxing
 
         Double int_TO_double_TO_Double          = (double)                        9;  // Explicit Cast AutoBoxing
-        Double Integer_TO_int_TO_double_Double1 = (double)       Integer.valueOf(7);  // Boxing, AutoUnboxing, Implicit Cast AND AutoBoxing
-        Double Integer_TO_int_TO_double_Double2 = (double) (int) Integer.valueOf(0);  // Boxing, AutoUnboxing, Explicit Cast AND AutoBoxing
+        Double Integer_TO_int_TO_double_Double  = (double)       Integer.valueOf(77); // Boxing, AutoUnboxing, Implicit Cast AND AutoBoxing
+    //  Double Integer_TO_Double                =                Integer.valueOf(0);  // COMPILE ERROR
 
         Double Double_TO_Double            = Double.valueOf(9);                       // Boxing
         Double Integer_TO_double_TO_Double = Integer.valueOf(13).doubleValue();       // Boxing, Unboxing AND AutoBoxing
-    //  Double Integer_TO_Double           = Integer.valueOf(0);                      // COMPILE ERROR
 
      // ----------------------------------------------------------------------------------------------
 
