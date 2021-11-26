@@ -9,11 +9,11 @@ public class BoxingAndUnboxing {
 
         Integer Integer_TO_Integer          =   Integer.valueOf(12);             // Boxing
 
-        Integer Double_TO_int_TO_Integer    = Double.valueOf(13).intValue();     // Boxing, Unboxing AND AutoBoxing
      // Integer Double_TO_Integer           = Double.valueOf(13);                // COMPILE ERROR
+        Integer Double_TO_int_TO_Integer    = Double.valueOf(13).intValue();     // Boxing, Unboxing AND AutoBoxing
 
         Integer double_to_int_TO_Integer    = (int)                         12D; // Explicit Cast AND AutoBoxing
-        Integer Double_TO_double_TO_Integer = (int) (double) Double.valueOf(10); // Boxing, AutoUnboxing, Explicit Cast AND AutoBoxing
+        Integer Double_TO_double_TO_Integer = (int) (double) Double.valueOf(10); // Boxing, AutoUnboxing, Explicit Cast AND AutoBoxing  ********Nota: Force AutoUnboxing
 
      // ----------------------------------------------------------------------------------------------
 
@@ -33,7 +33,7 @@ public class BoxingAndUnboxing {
         int Integer_TO_int1          =                Integer.valueOf(11).intValue();   // Boxing, Unboxing
      // int double_TO_int            =                Double.valueOf(0).doubleValue();  // COMPILE ERROR
 
-        int Double_TO_double_TO_int1 = (int) (double) Double.valueOf(10);               // Boxing, AutoUnboxing AND Explicit Cast   **Nota: Force AutoUnboxing
+        int Double_TO_double_TO_int1 = (int) (double) Double.valueOf(10);               // Boxing, AutoUnboxing AND Explicit Cast       ********Nota: Force AutoUnboxing
         int Double_TO_double_TO_int2 = (int)          Double.valueOf(11).doubleValue(); // Boxing, Unboxing AND Explicit Cast
      // int Double_TO_int            = (int)          Double.valueOf(10);               // COMPILE ERROR
 
